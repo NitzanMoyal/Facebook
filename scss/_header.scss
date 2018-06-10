@@ -1,0 +1,90 @@
+.header {
+    background-color: #4267b2;
+    height: 43px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    position: fixed;
+    width: 100%;
+}
+
+.logo-search {
+    padding-left: 11rem;
+    display: flex;
+    align-items: center;
+    width: 35%;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.search-box {
+    width: 100%;
+}
+
+.fa-facebook-square {
+    padding-right: 0.4rem;
+    color: white;
+    font-size: 1.7rem;
+}
+
+.search-btn {
+    border: none;
+    border-style: none;
+    height: 54%;
+    background-color: #F8F8F8;
+}
+
+.fa-search {
+    color: #787878;
+}
+
+.user-zone {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    justify-content: space-around;
+    width: 25%;
+    padding-right: 9%;
+    flex-wrap: nowrap;
+}
+
+.v-line {
+    border-left: 1px solid rgb(83, 83, 83);
+    height: 20px;
+    opacity: 0.5;
+}
+
+.user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.user,
+.link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.user-img {
+    max-height: 25px;
+    max-width: 25px;
+    border-radius: 50%;
+    padding-right: 0.5rem;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.icon-item{
+    color: rgb(36, 35, 35);
+    font-size: 1.2rem;
+    opacity: 0.90;
+}

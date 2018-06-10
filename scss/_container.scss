@@ -1,0 +1,244 @@
+//TODO: fix divs
+@import "variables";
+.container {
+    display: grid;
+    grid-template-columns: 11rem 33rem 19rem;
+    grid-column-gap: 1rem;
+    padding: 11rem;
+    padding-top: 3.6rem;
+    grid-template-areas: "side posts events";
+}
+
+.side {
+    display: flex;
+    flex-wrap: nowrap;
+    grid-area: side;
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    grid-row-gap: 1rem;
+    grid-template-areas: "side-link" "side-link" "side-link" "side-link" "side-link" "side-link" "side-link" "side-link" "side-link" "side-link" "side-link" "side-link";
+}
+
+.side-img::before {
+    font-size: 1.5rem;
+    vertical-align: middle;
+    padding-right: 0.6rem;
+}
+
+.side-link {
+    font-size: 0.8rem;
+}
+
+.posts {
+    grid-area: posts;
+}
+
+.my-post {
+    display: flex;
+    flex-direction: column;
+    width: $width;
+    background-color: $base-bg-color;
+    border-radius: 0.4rem;
+    border: $border;
+}
+
+.new-post-header {
+    height: 2rem;
+    width: $width;
+    border-bottom: 1px solid #dddfe2;
+    font-weight: bold;
+    background-color: #f6f7f9;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.new-post-header-items {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    color: #4b4f56;
+    width: 70%;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.new-post-header-item {
+    @extend .new-post-header-items;
+    width: auto;
+    padding: 0.5rem;
+    >span {
+        margin-left: 0.3rem;
+    }
+}
+
+.new-post-content,
+.post-header {
+    display: flex;
+    width: $width;
+    align-items: center;
+    height: 5rem;
+    font-size: 0.9rem;
+    color: rgb(121, 116, 116); 
+   
+    &.post-header {
+        margin-top: 1rem;
+    }
+}
+
+.h-line {
+    display: flex;
+    align-content: center;
+
+  justify-content: center;
+    >div{
+        border-bottom: $border;
+
+        height: 0.5rem;
+        width: 90%;
+    }
+   
+}
+
+.post-content {
+    background-color: $base-bg-color;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    width: $width;
+    align-items: center;
+    font-size: 0.9rem;
+    color: rgb(121, 116, 116);
+    &>span,
+    .post-image {
+        width: 95%;
+        margin-bottom: 1rem;
+    }
+}
+
+.new-post-user-image {
+    align-self: center;
+    max-height: 40px;
+    max-width: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+    padding-right: 0.5rem;
+    padding-left: 1rem;
+}
+
+.add-to-post {
+    grid-area: posts;
+    display: flex;
+    width: 100%;
+    align-self: center;
+    align-items: center;
+    height: 3rem;
+    font-size: 0.9rem;
+    color: rgb(121, 116, 116);
+    border-top: none;
+    
+}
+
+.add-item,
+.add-feeling {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f7f9;
+    border-radius: 3rem;
+    width: 25%;
+    margin: 0.1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #4b4f56;
+    height: 32px;
+    line-height: 32px;
+}
+
+.fa-smile {
+    color: rgb(245, 201, 7);
+    font-size: 1rem;
+    padding-right: 0.5rem;
+}
+
+.add-item>.fa-images {
+    color: rgb(65, 92, 165);
+    font-size: 1rem;
+    padding-right: 0.5rem;
+}
+
+.add-item:last-child {
+    width: 7%;
+}
+
+.news-feed-post{
+    @extend .my-post;
+    margin-top: 0.8rem;
+}
+.post-header {
+    display: grid;
+    width: $width;
+    height: 3.5rem;
+    grid-template-rows: repeat(2, 1.3rem);
+    grid-template-columns: 4rem 28rem;
+    grid-template-areas: "image name" "image time";
+    
+}
+
+.user-name {
+    grid-area: name;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    color: #365899;
+    text-decoration: none;
+}
+
+.time-stamp {
+    grid-area: time;
+    font-size: 0.7rem;
+}
+
+.post-header>.new-post-user-image {
+    grid-area: image;
+    grid-row: 1 / span 2;
+}
+
+.events {
+    grid-area: events;
+}
+
+.story-container {
+    @extend .my-post;
+    justify-content: space-around;
+    padding: 0.5rem;
+}
+
+.story-header {
+    display: flex;
+    justify-content: space-between;
+    width: $width;
+    align-content: center;
+    color: #616770;
+    font-size: 13px;
+    font-weight: 600;
+    width: 95%;
+    ~.fa-ellipsis-h {
+        font-size: 15px;
+    }
+}
+
+.story {
+    @extend .post-header;
+    grid-template-columns: 4rem 9rem;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: $base-bg-color;
+}
+
+.story-user-image {
+    @extend .new-post-user-image;
+}
