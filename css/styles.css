@@ -203,7 +203,13 @@
   color: #797474;
 }
 
-.post-content > span,
+.post-content > textarea {
+  border: none;
+  overflow: auto;
+  outline: none;
+}
+
+.post-content > textarea,
 .post-content .post-image {
   width: 95%;
   margin-bottom: 1rem;

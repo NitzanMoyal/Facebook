@@ -111,11 +111,18 @@
     align-items: center;
     font-size: 0.9rem;
     color: rgb(121, 116, 116);
-    &>span,
+    &>textarea{
+        border: none;
+        overflow: auto;
+        outline: none;
+    }
+    &>textarea,
     .post-image {
+        
         width: 95%;
         margin-bottom: 1rem;
     }
+
 }
 
 .new-post-user-image {
