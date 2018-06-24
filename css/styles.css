@@ -131,6 +131,15 @@
   border: 1px solid #dddfe2;
 }
 
+.my-post > button, .news-feed-post > button, .story-container > button {
+  display: block;
+  width: 10%;
+  border: 0;
+  padding: 5px 10px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
 .new-post-header {
   height: 2rem;
   width: 100%;
@@ -174,6 +183,18 @@
   color: #797474;
 }
 
+.new-post-content > textarea,
+.post-header > textarea, .story > textarea {
+  border: none;
+  overflow: auto;
+  outline: none;
+  display: block;
+  width: 600px;
+  padding: 5px;
+  font-size: 14px;
+  background: transparent;
+}
+
 .new-post-content.post-header, .new-post-content.story,
 .post-header.post-header,
 .story {
@@ -203,13 +224,7 @@
   color: #797474;
 }
 
-.post-content > textarea {
-  border: none;
-  overflow: auto;
-  outline: none;
-}
-
-.post-content > textarea,
+.post-content > span,
 .post-content .post-image {
   width: 95%;
   margin-bottom: 1rem;
